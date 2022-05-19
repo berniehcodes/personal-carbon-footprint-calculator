@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+    	<meta charset="utf-8">
+    	<meta name="description" content="This is where your description goes">
+    	<meta name="keywords" content="one, two, three">
+
+		<title>Carbon Calculator</title>
+
+		<!-- external CSS link -->
+		<link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+	<body>
+		<section>
+			<section class="inputs">	
+				<h1>Electricity Carbon Footprint Calculator</h1>
+				<label for="province-select">Where do you live? </label> 
+				<!-- return image of the province?? and the energy mix?? -->
+				<select name ="provinces" id="location">
+					<option value=''>--Please choose an option--
+					</option>
+						<option value="ab">Alberta</option>
+						<option value="bc">British Columbia</option>
+						<option value="mb">Manitoba</option>
+						<option value="nb">New Brunswick</option>
+						<option value="nl">Newfoundland and Labrador</option>
+						<option value="ns">Nova Scotia</option>
+						<option value="on">Ontario</option>
+						<option value="pe">Prince Edward Island</option>
+						<option value="qc">Quebec</option>
+						<option value="sk">Saskatchewan</option>
+						<option value="nt">Northwest Territories</option>
+						<option value="nu">Nunavut</option>
+						<option value="yt">Yukon</option>
+				</select>	
+				<!-- <p>Carbon Intensity for province: </p> -->
+				<!-- <p id="carbonIntensity"> </p> -->
+				<p></p>
+				<label for="usage"> How much energy do you use? </label>
+				<input type ='number' id="usage" name="energyUse"></input>
+
+				<select name = 'unit' id="electricityUnit">
+					<option value=''>--Unit--
+					</option>
+					<option value="mwh">MWh</option>
+					<option value="kwh">kWh</option>
+				</select>
+				<p></p>
+				<label for="usage"> Number of people in your household: </label>
+				<input type ='number' id="people" name=""></input>
+				<p></p>
+			</section>	
+			<section class="click">
+				<button id="calc">Calculate! </button>
+				<button id="clear">Reset </button>
+			</section>
+			<section class="outputs">
+				<h3>Your Electricity Carbon Footprint</h3>
+				<h4 class="hidden">Energy Mix: </h4>
+				<p class = "energyMix">
+				<h4 class="hidden"> Total carbon emissions from electricity use: </h4>
+				<p class="total"> </p>
+				<h4 class="hidden"> Total carbon emissions from electricity use per capita:  </h4>
+				<p class="perCapita"> </p>
+				<!-- ADD IN WHAT THE MIX LOOKS LIKE IF YOU LIVED SOMEWHERE ELSE?? <h4 class="hidden diffLocale"> </h4> -->
+			</section>
+		</section>
+		<h5> Sources:<a href ='https://docs.carboninterface.com/#/'> Carbon Interface API</a>, <a href='https://www.cer-rec.gc.ca/en/data-analysis/energy-markets/provincial-territorial-energy-profiles/'>Provincial and Territorial Energy Profiles from Government of Canada</a> </h5> 
+		
+		<script type="text/javascript" src="js/main.js"></script>
+	</body>
+</html>
